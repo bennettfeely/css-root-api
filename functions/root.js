@@ -42,9 +42,9 @@ exports.handler = async function (event, context, callback) {
 			"Access-Control-Allow-Origin": "*",
 			"Access-Control-Allow-Headers": "*",
 			"Access-Control-Allow-Methods": "GET",
+			'Content-Type': 'text/css; charset=utf-8',
 		},
 		statusCode: 200,
-		contentType: "text/css; charset=utf-8",
 		body: output,
     };
 };
