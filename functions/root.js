@@ -1,11 +1,12 @@
 exports.handler = function (event, context, callback) {
-	const Date = new Date();
 
 	function rand(min, max) {
 		min = Math.ceil(min);
 		max = Math.floor(max);
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
+
+	const date = new Date();
 
 	const output = `:root {
 	--random: ${Math.random()};
@@ -28,13 +29,13 @@ exports.handler = function (event, context, callback) {
 	--e: ${Math.E};
 	--golden-ratio: 1.618033988749894;
 
-	--utc-date: ${Date.getUTCDate()};
-	--utc-day: ${Date.getUTCDay()};
-	--utc-full-year: ${Date.getUTCFullYear()};
-	--utc-hours: ${Date.getUTCHours()};
-	--utc-milliseconds: ${Date.getUTCMilliseconds()};
-	--utc-minutes: ${Date.getUTCMinutes()};
-	--utc-month: ${Date.getUTCMonth()};
+	--utc-date: ${date.getUTCDate()};
+	--utc-day: ${date.getUTCDay()};
+	--utc-full-year: ${date.getUTCFullYear()};
+	--utc-hours: ${date.getUTCHours()};
+	--utc-milliseconds: ${date.getUTCMilliseconds()};
+	--utc-minutes: ${date.getUTCMinutes()};
+	--utc-month: ${date.getUTCMonth()};
 }`;
 
 	callback(null, {
