@@ -17,8 +17,8 @@ exports.handler = async function (event, context, callback) {
 	--random-dark-hex: ${randomColor({ luminosity: "dark" })};
 
 	--random-rgb: rgb(${rand(0, 255)}, ${rand(0, 255)}, ${rand(0, 255)});
-	--random-rgba: rgba(${rand(0, 255)}, ${rand(0, 255)}, ${rand(0,255)}, ${Math.random().substring(0, 4)});
-	--random-hsl: hsla(${rand(0, 360)}, ${rand(0, 100)}%, ${rand(0,100)}%, ${Math.random().substring(0, 4)});
+	--random-rgba: rgba(${rand(0, 255)}, ${rand(0, 255)}, ${rand(0,255)}, ${Math.random().toFixed(2)});
+	--random-hsl: hsla(${rand(0, 360)}, ${rand(0, 100)}%, ${rand(0,100)}%, ${Math.random().toFixed(2)});
 	--random-hsla: hsl(${rand(0, 360)}, ${rand(0, 100)}%, ${rand(0, 100)}%);
 	--random-hex: #${randomColor({ luminosity: "random", hue: "random" })};
 	--random-hex-3: #${randomColor({ luminosity: "random", hue: "random" }).substring(0, 3)};
