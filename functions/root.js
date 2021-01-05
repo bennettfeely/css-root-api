@@ -1,8 +1,8 @@
 exports.handler = function (event, context, callback) {
 	const output = `:root {
 	--random: ${Math.random()};
-	--pi: ${Math.PI()};
-	--e: ${Math.E()};
+	--pi: ${Math.PI};
+	--e: ${Math.E};
 }`;
 
 	callback(null, {
