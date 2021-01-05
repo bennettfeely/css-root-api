@@ -1,5 +1,4 @@
-exports.handler = function (event, context, callback) {
-
+exports.handler = async function (event, context, callback) {
 	function rand(min, max) {
 		min = Math.ceil(min);
 		max = Math.floor(max);
@@ -38,13 +37,14 @@ exports.handler = function (event, context, callback) {
 	--utc-month: ${date.getUTCMonth()};
 }`;
 
-	callback(null, {
-		headers: {
+	return {
+        headers: {
 			"Access-Control-Allow-Origin": "*",
-			"Access-Control-Allow-Methods": "GET",
 			"Access-Control-Allow-Headers": "*",
+			"Access-Control-Allow-Methods": "GET",
 		},
 		statusCode: 200,
+		content-type: "text/css; charset=utf-8",
 		body: output,
-	});
+    };
 };
