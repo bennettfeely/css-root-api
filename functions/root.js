@@ -35,6 +35,7 @@ exports.handler = async function (event, context, callback) {
 	--e: ${Math.E}; /* === Math.E */
 
 	/* Time */
+	--date: ${date};
 	--year: ${date.getFullYear()}; /* === Date.getFullYear() */
 	--utc-year: ${date.getUTCFullYear()}; /* === Date.getUTCFullYear() */
 }`;
