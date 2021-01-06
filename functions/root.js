@@ -20,8 +20,8 @@ exports.handler = async function (event, context, callback) {
 	--random-rgba: rgba(${rand(0, 255)}, ${rand(0, 255)}, ${rand(0,255)}, ${Math.random().toFixed(2)});
 	--random-hsl: hsla(${rand(0, 360)}, ${rand(0, 100)}%, ${rand(0,100)}%, ${Math.random().toFixed(2)});
 	--random-hsla: hsl(${rand(0, 360)}, ${rand(0, 100)}%, ${rand(0, 100)}%);
-	--random-hex: #${randomColor({ luminosity: "random", hue: "random" })};
-	--random-hex-3: #${randomColor({ luminosity: "random", hue: "random" }).substring(0, 3)};
+	--random-hex: ${randomColor({ luminosity: "random", hue: "random" })};
+	--random-hex-3: ${randomColor({ luminosity: "random", hue: "random" }).substring(0, 3)};
 	--random-color-keyword: ${colors[rand(0, colors.length)]};
 
 	--golden-ratio: 1.618033988749894;
