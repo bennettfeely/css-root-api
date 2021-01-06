@@ -14,7 +14,7 @@ exports.handler = async function (event, context, callback) {
 	/* Random numbers, useful for using with calc() */
 	--random: ${Math.random()}; /* === Math.random() */
 	--random-boolean: ${rand(0, 1)}; /* === 0 or 1 */
-	--random-deg: ${rand(0, 359)}deg; /* random 0deg to 359deg */ 
+	--random-deg: ${rand(0, 359)}deg; /* 0deg to 359deg */ 
 
 	/* Random pleasant colors */
 	--random-light-hex: ${randomColor({ luminosity: "light" })};
@@ -35,26 +35,8 @@ exports.handler = async function (event, context, callback) {
 	--e: ${Math.E}; /* === Math.E */
 
 	/* Time */
-	--date: ${date};
-	--year: ${date.getFullYear()}; /* === Date.getFullYear() */
-	--utc-year: ${date.getUTCFullYear()}; /* === Date.getUTCFullYear() */
+	--year: ${date.getUTCFullYear()}; /* === Date.getUTCFullYear() */
 }`;
-
-// --utc-date: ${date.getUTCDate()};
-// --utc-day: ${date.getUTCDay()};
-// --utc-full-year: ${date.getUTCFullYear()};
-// --utc-hours: ${date.getUTCHours()};
-// --utc-milliseconds: ${date.getUTCMilliseconds()};
-// --utc-minutes: ${date.getUTCMinutes()};
-// --utc-month: ${date.getUTCMonth()};
-
-// 	--sqrt2: ${Math.SQRT2};		/* returns the square root of 2  */
-// 	--sqrt1_2: ${Math.SQRT1_2};	/* returns the square root of 1/2 */
-// 	--ln2: ${Math.LN2};			/* returns the natural logarithm of 2 */
-// 	--ln10: ${Math.LN10};		/* returns the natural logarithm of 10 */
-// 	--log2e: ${Math.LOG2E};		/* returns base 2 logarithm of E */
-// 	--log10e: ${Math.LOG10E};	/* returns base 10 logarithm of E */
-
 
 	return {
         headers: {
